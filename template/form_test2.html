@@ -1,0 +1,20 @@
+<html>
+{% block body %}
+<body>
+    <input type="button" onclick="location.href='http://127.0.0.1:8000/form'" value="最初の画面に戻る">
+    <hr>
+    誰の文字ですか？
+    <hr>
+    <img src= {{ image }} width="182" height="182"/>
+    <hr>
+    <form action="" method="POST">
+        {% csrf_token %} {{ form }}
+        <input type="submit" value="送信 {{ nume }}/20" />
+    </form>
+
+    
+
+</body>
+
+</html>
+{% endblock %}

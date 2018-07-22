@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block body %} {{ message }}
+<hr>
+<form method="get" action="">
+    {{ form.errors.your_name }}
+    <label>{{ form.your_name.label }} {{ form.your_name }}</label>
+    <br> {{ form.errors.gender }}
+    <label>{{ form.gender.label }} {{ form.gender }}</label>
+    <br> {{ form.errors.memo }}
+    <label style="vertical-align: top;">{{ form.memo.label }} {{ form.memo }}</label>
+    <br>
+
+    <input type="submit" value="スタート">
+</form>
+{% if your_name %}
+ {{ your_name }}さん、こんにちは。
+{% endif %}
+{% endblock %}

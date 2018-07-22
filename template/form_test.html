@@ -1,0 +1,34 @@
+
+<html>
+
+<body>
+
+{% block body %}
+
+    以下の　A～Eさんの筆跡を覚えて、後ほど出る文字が誰の文字であるか当てて下さい
+    注＊一番下に名前の入力欄があります
+    <hr> Aさんの筆跡
+    <br>
+    <img src='static/test_data/a.png' />
+    <hr> Bさんの筆跡
+    <br>
+    <img src='static/test_data/b.png' />
+    <hr> Cさんの筆跡
+    <br>
+    <img src='static/test_data/c.png' />
+    <hr> Dさんの筆跡
+    <br>
+    <img src='static/test_data/d.png' />
+    <hr> Eさんの筆跡
+    <br>
+    <img src='static/test_data/e.png' />
+    <hr>
+
+    <form action="{% url 'form_app' %}" method="get">
+        <!-- {% csrf_token %} {{ form }} -->
+        <label>名前:<input type="text" size="30" name="your_name"></label>
+        <input type="submit" value="回答を開始する" />
+    </form>
+
+{% endblock %}
+</html>
