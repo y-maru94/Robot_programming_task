@@ -55,7 +55,7 @@ ROOT_URLCONF = 'manager_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,  'templates'), '/home/maru94/tr18018/robot_program/manager_project/template'],
+        'DIRS': [os.path.join(BASE_DIR,  'templates'), './template'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
