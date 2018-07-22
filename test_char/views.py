@@ -179,15 +179,25 @@ def kekka_csv(name):
         for line in reader:
             if line[0] == name:
                 d.append(line)
-    d = d[0]
-    for i in range(1,len(d)-1,2):
-        if d[i] == d[i+1]:
-            text = text + d[i]+'-'+d[i+1]+' 正解\n'
-            ans += 1
-        elif d[i+1] == 'f':
-            wakaran += 1
-        else:
-            text = text + d[i]+'-'+d[i+1]+' 不正解\n'
+    try:
+        d = d[0]
+        for i in range(1,len(d)-1,2):
+            if d[i] == d[i+1]:
+                text = text + d[i]+'-'+d[i+1]+' 正解\n'
+                ans += 1
+            elif d[i+1] == 'f':
+                wakaran += 1
+            else:
+                text = text + d[i]+'-'+d[i+1]+' 不正解\n'
+    except IndexError:
+        for i in range(1, len(d)-1, 2):
+            if d[i] == d[i+1]:
+                text = text + d[i]+'-'+d[i+1]+' 正解\n'
+                ans += 1
+            elif d[i+1] == 'f':
+                wakaran += 1
+            else:
+                text = text + d[i]+'-'+d[i+1]+' 不正解\n'
     return text, ans, wakaran
 
 
