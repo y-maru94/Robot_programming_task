@@ -5,7 +5,6 @@ from .forms import MyForm
 
 import csv
 import numpy as np
-import pandas as pd
 
 def name_catch(form):
     name = str(form)
