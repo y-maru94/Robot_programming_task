@@ -15,18 +15,21 @@
 
 ## 手順
 
-### 1. あいうえお
+### 1. サーバーの起動
 内容  
-`test.py`
-
-- リスト
+`manage.py`
 ```
-# コマンド
-comand
+python3 manage.py runserver
 ```
 
-下記の引数を与えることができます．
-- `--test` (default = 0)
+### 2. サイトに移動
+内容  
+次のサイトを開く
+[http://127.0.0.1:8000/form](https://http://127.0.0.1:8000/form)
+
+```
+https://http://127.0.0.1:8000/form
+```
 
 # Reference <!-- 参照 -->
 - 参考URL等
